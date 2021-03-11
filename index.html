@@ -1,0 +1,842 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/tilt.js/1.0.3/tilt.jquery.min.js"
+      integrity="sha512-14AZ/DxUrlF26z6v7egDkpJHKyJRn/7ue2BgpWZ/fmqrqVzf4PrQnToy99sHmKwzKev/VZ1tjPxusuTV/n8CcQ=="
+      crossorigin="anonymous"
+    ></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__content">
+        <nav class="menu">
+          <div class="container">
+            <img
+              src="./img/Asset 23@3x 1.png"
+              alt="Кузня брендов"
+              class="menu__logo"
+            />
+            <div class="menu__title-wrapper">
+              <h2 class="title-wrapper__title">
+                <span class="title-wrapper__text">С нами вас ждёт успех</span> 
+                <a class="refContact" href="#contact_anchor">
+                  <button class="title-wrapper__btn">Написать</button>
+                </a>
+              </h2>
+            </div>
+            <ul class="menu__list">
+              <li class="list__item">
+                <a href="#advantages_anchor">Наша цель</a>
+              </li>
+              <li class="list__item"><a href="#services_anchor">Услуги</a></li>
+              <li class="list__item">
+                <a href="#industry_anchor">Индустрии</a>
+              </li>
+              <li class="list__item">
+                <a href="#experties_anchor">Экспертиза</a>
+              </li>
+              <li class="list__item"><a href="#contact_anchor">Контакты</a></li>
+            </ul>
+            <div class="menu__language-wrapper">
+              <p class="language-wrapper__text en">English</p>
+              <p class="language-wrapper__text selected ru">Русский</p>
+            </div>
+            <div class="menu__contact-wrapper">
+              <a href="mailto:info@brandsforge.ru" class="contact-wrapper__mail"
+                >info@brandsforge.ru</a
+              >
+              <a
+                href="tel:+7 (495) 917-72-58"
+                class="contact-wrapper__phoneNumber"
+                >+7 (495) 917-72-58</a
+              >
+              <a
+                href="tel:+7 (495) 917-72-59"
+                class="contact-wrapper__phoneNumber"
+                >+7 (495) 917-72-59</a
+              >
+            </div>
+            <div class="menu__close-wrapper">
+              <svg class="close-wrapper__close">
+                <use xlink:href="..icons/sprite.svg#menu_close"></use>
+              </svg>
+            </div>
+          </div>
+        </nav>
+        <div class="container">
+          <div class="header__top">
+            <img
+              src="./img/logo@3x 1.png"
+              alt="Кузня брендов"
+              class="header__top-logo"
+            />
+            <img src="./img/Layer 4@3x 1 (1).png" alt="logo" class="header__top-logo-mobile">
+            <div class="header__top-rWrapper">
+              <p class="header__top-phone">+7 (495) 917-72-58</p>
+              <p class="header__top-language en">EN</p>
+              <p class="header__top-language selected ru">РУ</p>
+              <svg class="header__top-menu">
+                <use xlink:href="../icons/sprite.svg#menu_burger"></use>
+              </svg>
+            </div>
+          </div>
+          <h1 class="header__title">Мы закаляем брэнды</h1>
+          <p class="header__text">
+            Сайты и интерфейсы, брендинг, реклама и разработка проектов в
+            digital.
+          </p>
+
+          <div class="wrapper__pop-up">
+            <div class="pop-up__message-send complete">
+              <svg class="message-send__icon-close">
+                <use xlink:href="../icons/sprite.svg#form_close"></use>
+              </svg>
+              <div class="message-send__icon-wrapper">
+                <img
+                  src="./icons/complete.svg"
+                  alt="Отправлено"
+                  class="message-send__icon-complete"
+                />
+              </div>
+              <h2 class="message-send__title">Письмо отправлено</h2>
+              <p class="message-send__text">
+                Благодарим Вас за обращение к нам. Мы свяжемся с вами как можно
+                скорее.
+              </p>
+              <button class="message-send__btn">Окей</button>
+            </div>
+
+            <div class="pop-up__message-send error">
+              <svg class="message-send__icon-close">
+                <use xlink:href="../icons/sprite.svg#form_close"></use>
+              </svg>
+              <div class="message-send__icon-wrapper">
+                <img
+                  src="./icons/red-close.svg"
+                  alt="Отправлено"
+                  class="message-send__icon-complete"
+                />
+              </div>
+              <h2 class="message-send__title">Ошибка отправки</h2>
+              <p class="message-send__text">
+                Что-то пошло не так. Попробуйте позже, или напишите на
+                <a href="mailto:hello@brandsforge.ru">hello@brandsforge.ru</a>
+              </p>
+              <button class="message-send__btn">Окей</button>
+            </div>
+          </div>
+
+          <div class="header__icons-wrapper">
+            <form action="" class="form__message">
+              <div class="form__message-header">
+                <h2 class="message-header__title">Рады знакомству</h2>
+                <svg class="message-header__icon">
+                  <use xlink:href="../icons/sprite.svg#form_close"></use>
+                </svg>
+                <p class="message-header__text">
+                  Напишите и мы ответим в течении пары минут ⏳
+                </p>
+              </div>
+              <div class="form__message-body">
+                <input
+                  type="text"
+                  name="message"
+                  id="message"
+                  class="message-body__message"
+                  placeholder="Введите сообщение..."
+                  autocomplete="off"
+                />
+                <p class="message-body__hellow">
+                  <span class="hellow_first">Привет. 👋 Предлагаю</span>
+                  <span class="hellow_two">обсудить проект</span>
+                </p>
+              </div>
+            </form>
+
+            <form action="" class="user__contact">
+              <div class="user__contact-header">
+                <svg class="user__contact-icon">
+                  <use xlink:href="../icons/sprite.svg#back_arrow"></use>
+                </svg>
+                <h2 class="user__contact-title">Контакты для связи</h2>
+              </div>
+              <input
+                type="text"
+                name="user-name"
+                id="user-name"
+                class="user__contact-name"
+                placeholder="Ваше имя"
+              />
+              <input
+                type="email"
+                name="user__contact-email"
+                id="user__contact-email"
+                class="user__contact-email"
+                placeholder="Email для связи"
+              />
+            </form>
+
+            <a href="#advantages_anchor" class="scroll-wrapper">
+              <svg class="icons-wrapper__mouse">
+                <use xlink:href="../icons/sprite.svg#mouse"></use>
+              </svg>
+              <p class="icons-wrapper__text">Листай</p>
+            </a>
+            <div class="icons-wrapper__circle">
+              <svg class="icons-wrapper__arrow__right">
+                <use xlink:href="../icons/sprite.svg#arrow_right"></use>
+              </svg>
+            </div>
+            <div class="icons-wrapper__circle-2">
+              <svg class="icons-wrapper__paper__plane">
+                <use xlink:href="../icons/sprite.svg#paper_plane"></use>
+              </svg>
+            </div>
+          </div>
+          <div class="header__info">
+            <p class="header__info-text">
+              <span class="text__small">Наша цель</span>
+              Развиваем конкурентоспособность продукта, привлекаем клиентов из
+              всех доступных каналов коммуникации, формируем воронку продаж и
+              открываем новые точки роста
+            </p>
+          </div>
+          <div class="header__complete-project-wrapper">
+            <div class="complete-project-wrapper__digital-wrapper">
+              <p class="digital-wrapper__digital">+30</p>
+              <p class="digital-wrapper__text">Digital проектов реализовано</p>
+            </div>
+            <div class="complete-project-wrapper__digital-wrapper">
+              <p class="digital-wrapper__digital">+6</p>
+              <p class="digital-wrapper__text">Лет на Российском рынке</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <img
+        src="./img/image 13.png"
+        alt=""
+        srcset="./img/image13@2x.png 2x"
+        class="header__forge"
+      />
+      <div class="header__forge-mobile"></div>
+      <img src="./img/gd.png" alt="gradient" class="gradient">
+
+    </header>
+    <main class="main">
+      <section class="advantages" id="advantages_anchor">
+        <div class="container">
+          <div class="advantages-wrapper__list">
+            <p class="list__sub-title"><span>5</span> Причин работать с нами</p>
+          </div>
+          <div class="advantages-wrapper__list">
+            <div class="wrapper__list-wraper round-right">
+              <div class="list__wrapper">
+                <span class="wrapper__digital">1</span>
+                <svg class="wrapper__icon">
+                  <use xlink:href="../icons/sprite.svg#rocket"></use>
+                </svg>
+              </div>
+              <p class="list__text">Сильнейшая экспертиза по SEO в РФ</p>
+              <a class="refContact" href="#contact_anchor">
+                <button class="list__btn">
+                  <span class="btn__text">Написать</span>
+                </button>
+              </a>
+            </div>
+          </div>
+          <div class="advantages-wrapper__list">
+            <div class="wrapper__list-wraper">
+              <div class="list__wrapper">
+                <span class="wrapper__digital">2</span>
+                <svg class="wrapper__icon">
+                  <use xlink:href="../icons/sprite.svg#users"></use>
+                </svg>
+              </div>
+              <p class="list__text">
+                Опыт команды в высококонкурентных областях
+              </p>
+              <a class="refContact" href="#contact_anchor">
+                <button class="list__btn">
+                  <span class="btn__text">Написать</span>
+                </button>
+              </a>
+            </div>
+          </div>
+          <div class="advantages-wrapper__list">
+            <div class="wrapper__list-wraper">
+              <div class="list__wrapper">
+                <span class="wrapper__digital">3</span>
+                <svg class="wrapper__icon">
+                  <use xlink:href="../icons/sprite.svg#browser"></use>
+                </svg>
+              </div>
+              <p class="list__text">Опыт разработки сайтов любой сложности</p>
+              <a class="refContact" href="#contact_anchor">
+                <button class="list__btn">
+                  <span class="btn__text">Написать</span>
+                </button>
+              </a>
+            </div>
+          </div>
+          <div class="advantages-wrapper__list">
+            <div class="wrapper__list-wraper round-left-btm">
+              <div class="list__wrapper">
+                <span class="wrapper__digital">4</span>
+                <svg class="wrapper__icon">
+                  <use xlink:href="../icons/sprite.svg#star"></use>
+                </svg>
+              </div>
+              <p class="list__text">
+                У нас работают сильные сертифицированные специалисты
+              </p>
+              <a class="refContact" href="#contact_anchor">
+                <button class="list__btn">
+                  <span class="btn__text">Написать</span>
+                </button>
+              </a>
+            </div>
+          </div>
+          <div class="advantages-wrapper__list">
+            <div class="wrapper__list-wraper round-right-btm">
+              <div class="list__wrapper">
+                <span class="wrapper__digital">5</span>
+                <svg class="wrapper__icon">
+                  <use xlink:href="../icons/sprite.svg#dart"></use>
+                </svg>
+              </div>
+              <p class="list__text">Опыт в области сквозной аналитики</p>
+              <a class="refContact" href="#contact_anchor">
+                <button class="list__btn">
+                  <span class="btn__text">Написать</span>
+                </button>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="services" id="services_anchor">
+        <div class="sparkBackground"></div>
+        <div class="container">
+          <!-- <img src="./img/Asset 19@2x.png" alt="diamond-1" class="diamond-1" /> -->
+          <h2 class="services__sub-title">Услуги</h2>
+          <div class="services__section">
+            <div class="section">
+              <div class="section__wrapper">
+                <strong class="section__name">Брендинг</strong>
+                <p class="section__description">
+                  Установливаем правильную визуальную связь с вашими клиентами и
+                  пользователями путем создания привлекательного и
+                  запоминающегося брендинга.
+                </p>
+              </div>
+              <ul class="section__list">
+                <li class="list__item">Разработка платформ бренда</li>
+                <li class="list__item">Нейминг, разработка слогана</li>
+                <li class="list__item">Логотип, фирменный стиль</li>
+                <li class="list__item">
+                  Разработка принтов и сувенирных материалов
+                </li>
+              </ul>
+              <!-- <img
+                src="./img/Asset 6@2x.png"
+                alt="diamond-6"
+                class="diamond-6"
+              /> -->
+            </div>
+            <div class="section">
+              <div class="section__wrapper">
+                <strong class="section__name">Дизайн</strong>
+                <p class="section__description">
+                  Установливаем правильную визуальную связь с вашими клиентами и
+                  пользователями путем создания привлекательного и
+                  запоминающегося брендинга.
+                </p>
+              </div>
+              <ul class="section__list">
+                <li class="list__item">Аналитика</li>
+                <li class="list__item">Комплексные исследвоания</li>
+                <li class="list__item">Проектирование UI/UX</li>
+                <li class="list__item">Информационный дизайн</li>
+                <li class="list__item">Промо</li>
+                <li class="list__item">
+                  Юзабилити-тестирование сайта или прототипов
+                </li>
+              </ul>
+              <!-- <img
+                src="./img/Asset 9@2x.png"
+                alt="diamond-9"
+                class="diamond-9"
+              /> -->
+            </div>
+            <div class="section">
+              <div class="section__wrapper">
+                <strong class="section__name">Веб разработка</strong>
+                <p class="section__description">
+                  Установливаем правильную визуальную связь с вашими клиентами и
+                  пользователями путем создания привлекательного и
+                  запоминающегося брендинга.
+                </p>
+              </div>
+              <ul class="section__list">
+                <li class="list__item">Аналитика, исследования</li>
+                <li class="list__item">Проектирование UI/UX</li>
+                <li class="list__item">Адаптивный дизайн</li>
+                <li class="list__item">Верстка</li>
+                <li class="list__item">
+                  Разработка логики, интеграция шаблонов с CMS
+                </li>
+                <li class="list__item">Внедрение</li>
+                <li class="list__item">Наполнение контентом</li>
+                <li class="list__item">Тестирование</li>
+                <li class="list__item">Поддержка</li>
+              </ul>
+              <!-- <img
+                src="./img/Asset 11@2x.png"
+                alt="diamond-11"
+                class="diamond-11"
+              /> -->
+            </div>
+            <div class="section">
+              <div class="section__wrapper">
+                <strong class="section__name">Системная интеграция</strong>
+                <p class="section__description">
+                  Установливаем правильную визуальную связь с вашими клиентами и
+                  пользователями путем создания привлекательного и
+                  запоминающегося брендинга.
+                </p>
+              </div>
+              <ul class="section__list">
+                <li class="list__item">Разработка платформ бренда</li>
+                <li class="list__item">Нейминг, разработка слогана</li>
+                <li class="list__item">Логотип, фирменный стиль</li>
+                <li class="list__item">
+                  Разработка принтов и сувенирных материалов
+                </li>
+              </ul>
+            </div>
+            <div class="section">
+              <div class="section__wrapper">
+                <strong class="section__name">Мобильная разработка</strong>
+                <p class="section__description">
+                  Установливаем правильную визуальную связь с вашими клиентами и
+                  пользователями путем создания привлекательного и
+                  запоминающегося брендинга.
+                </p>
+              </div>
+              <ul class="section__list">
+                <li class="list__item">Аналитика, исследования</li>
+                <li class="list__item">Проектирование UI/UX</li>
+                <li class="list__item">
+                  Разработка: нативная, кросс-платформенная
+                </li>
+                <li class="list__item">Публикация</li>
+                <li class="list__item">Тестирование</li>
+                <li class="list__item">Поддержка</li>
+              </ul>
+            </div>
+            <div class="section">
+              <div class="section__wrapper">
+                <strong class="section__name">Продвижение</strong>
+                <p class="section__description">
+                  Установливаем правильную визуальную связь с вашими клиентами и
+                  пользователями путем создания привлекательного и
+                  запоминающегося брендинга.
+                </p>
+              </div>
+              <ul class="section__list">
+                <li class="list__item">SEO</li>
+                <li class="list__item">Контекстная рекалма</li>
+                <li class="list__item">SMM</li>
+              </ul>
+              <!-- <img
+                src="./img/Asset 16@2x.png"
+                alt="diamond-16"
+                class="diamond-16"
+              />
+              <img
+                src="./img/Asset 8@2x.png"
+                alt="diamond-8"
+                class="diamond-8"
+              /> -->
+            </div>
+            <div class="section">
+              <div class="section__wrapper">
+                <strong class="section__name">Поддержка</strong>
+                <p class="section__description">
+                  Установливаем правильную визуальную связь с вашими клиентами и
+                  пользователями путем создания привлекательного и
+                  запоминающегося брендинга.
+                </p>
+              </div>
+              <ul class="section__list">
+                <li class="list__item">Техническая поддержка</li>
+                <li class="list__item">Хостинг</li>
+                <li class="list__item">Системное администрирование</li>
+                <li class="list__item">Высоконагруженные решения</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="industry">
+        <div class="container">
+          <img
+            src="./img/Asset 14@2x.png"
+            alt="diamond-14"
+            class="diamond-14"
+          />
+          <img
+            src="./img/Asset 15@2x.png"
+            alt="diamond-15"
+            class="diamond-15"
+          />
+          <img
+            src="./img/Asset 17@2x.png"
+            alt="diamond-17"
+            class="diamond-17"
+          />
+          <img
+            src="./img/Asset 18@2x.png"
+            alt="diamond-18"
+            class="diamond-18"
+          />
+          <img
+            src="./img/Asset 16@2x.png"
+            alt="diamond-16"
+            class="diamond-16"
+          />
+          <div class="industry__info">
+            <div class="industry__info-wrapper">
+              <p class="info-wrapper__caption">С кем работаем</p>
+              <p class="info-wrapper__text">
+                Работаем с хорошими компаниями, большими и маленькими,
+                холдингами и стартапами, из России и по всему миру.
+              </p>
+              <div class="wrapper__diamond-btn">
+                <img
+                  src="./img/Asset 14@2x.png"
+                  alt="spark-14"
+                  class="spark-14"
+                />
+                <img
+                  src="./img/Asset 15@2x.png"
+                  alt="spark-15"
+                  class="spark-15"
+                />
+                <img
+                  src="./img/Asset 17@2x.png"
+                  alt="spark-17"
+                  class="spark-17"
+                />
+                <img
+                  src="./img/Asset 18@2x.png"
+                  alt="spark-18"
+                  class="spark-18"
+                />
+                <img
+                  src="./img/Asset 16@2x.png"
+                  alt="spark-16"
+                  class="spark-16"
+                />
+                <a class="refContact" href="#contact_anchor">
+                  <button class="info-wrapper__btn">
+                    <span class="info-wrapper__btn-text">Написать</span>
+                  </button>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="general__wrapper">
+            <div class="industry__wrapper">
+              <h2 class="industry__title" id="industry_anchor">Индустрии</h2>
+              <ul class="industry__list">
+                <li class="industry__list-item">
+                  <div class="list-item__circle">
+                    <svg class="circle__icon">
+                      <use xlink:href="../icons/sprite.svg#bank"></use>
+                    </svg>
+                  </div>
+                  Банки, финансы и страхование
+                </li>
+                <li class="industry__list-item">
+                  <div class="list-item__circle">
+                    <svg class="circle__icon">
+                      <use xlink:href="../icons/sprite.svg#home"></use>
+                    </svg>
+                  </div>
+                  Недвижимость и строительство
+                </li>
+                <li class="industry__list-item">
+                  <div class="list-item__circle">
+                    <svg class="circle__icon">
+                      <use xlink:href="../icons/sprite.svg#network_cloud"></use>
+                    </svg>
+                  </div>
+                  Телекоммуникации
+                </li>
+                <li class="industry__list-item">
+                  <div class="list-item__circle">
+                    <svg class="circle__icon">
+                      <use xlink:href="../icons/sprite.svg#shoping_cart"></use>
+                    </svg>
+                  </div>
+                  Торговля
+                </li>
+                <li class="industry__list-item">
+                  <div class="list-item__circle">
+                    <svg class="circle__icon">
+                      <use xlink:href="../icons/sprite.svg#beauty"></use>
+                    </svg>
+                  </div>
+                  Красота и здоровье
+                </li>
+                <li class="industry__list-item">
+                  <div class="list-item__circle">
+                    <svg class="circle__icon">
+                      <use xlink:href="../icons/sprite.svg#menu_dotes"></use>
+                    </svg>
+                  </div>
+                  И другие крутые клиенты
+                </li>
+              </ul>
+            </div>
+            <div class="expertise__wrapper">
+              <p class="expertise__title" id="experties_anchor">Экспертиза</p>
+              <div class="expertise__list">
+                <div class="expertise__list-item">Мобильные Приложения</div>
+                <div class="expertise__list-item">Цифровые Сервисы</div>
+                <div class="expertise__list-item">Дизайн</div>
+                <div class="expertise__list-item">Консалтинг</div>
+                <div class="expertise__list-item">Data Science</div>
+                <div class="expertise__list-item">Исследования</div>
+                <div class="expertise__list-item">iOS</div>
+                <div class="expertise__list-item">Android</div>
+                <div class="expertise__list-item">ИИ</div>
+                <div class="expertise__list-item">Backend</div>
+                <div class="expertise__list-item">Web</div>
+                <div class="expertise__list-item">UX & UI</div>
+                <div class="expertise__list-item">Machine Learning</div>
+                <div class="expertise__list-item">Тестирование</div>
+                <div class="expertise__list-item">SEO</div>
+                <div class="expertise__list-item">Service design</div>
+                <div class="expertise__list-item">Управление Продуктом</div>
+                <div class="expertise__list-item">Управление Проектами</div>
+                <div class="expertise__list-item">Desibg Thinking</div>
+                <div class="expertise__list-item">CJM</div>
+                <div class="expertise__list-item">SBP</div>
+                <div class="expertise__list-item">SERM & PR</div>
+                <div class="expertise__list-item">Big Data</div>
+                <div class="expertise__list-item">Управление Проектами</div>
+                <div class="expertise__list-item">Google Display Network</div>
+                <div class="expertise__list-item">YouTube</div>
+                <div class="expertise__list-item">Медиа & Брендинг</div>
+                <div class="expertise__list-item">SMM</div>
+                <div class="expertise__list-item">Google Search</div>
+                <div class="expertise__list-item">Programmatic & RTB</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="benefits">
+        <div class="container">
+          <div class="benefits__list">
+            <div class="benefits__list-item">
+              <svg class="circle__icon">
+                <use xlink:href="../icons/sprite.svg#team_star"></use>
+              </svg>
+              <h2 class="item__sub-title">Наш актив — люди и знания</h2>
+              <p class="item__text">
+                В нашей области люди решают всё для удобства других людей
+              </p>
+              <a class="refContact" href="#contact_anchor">
+                <button class="item__btn">
+                  <span class="item__btn-text">Написать</span>
+                </button>
+              </a>
+            </div>
+            <div class="benefits__list-item">
+              <svg class="circle__icon">
+                <use xlink:href="../icons/sprite.svg#infinity"></use>
+              </svg>
+              <h2 class="item__sub-title">
+                В дальний путь — сотрудничаем с самого начала до далеких дней
+              </h2>
+              <p class="item__text">
+                81% клиентов, обратившись один раз, работают с нами и по сей
+                день
+              </p>
+              <a class="refContact" href="#contact_anchor">
+                <button class="item__btn">
+                  <span class="item__btn-text">Написать</span>
+                </button>
+              </a>
+            </div>
+            <div class="benefits__list-item">
+              <svg class="circle__icon">
+                <use xlink:href="../icons/sprite.svg#fire"></use>
+              </svg>
+              <h2 class="item__sub-title">
+                Работаем с огоньком, у нас отличная реакция
+              </h2>
+              <p class="item__text">
+                Работаем сколько нужно, слышим и понимаем вас
+              </p>
+              <a class="refContact" href="#contact_anchor">
+                <button class="item__btn">
+                  <span class="item__btn-text">Написать</span>
+                </button>
+              </a>
+            </div>
+            <div class="benefits__list-item">
+              <svg class="circle__icon">
+                <use xlink:href="../icons/sprite.svg#stars"></use>
+              </svg>
+              <h2 class="item__sub-title">
+                Лояльность постоянных клиентов на «5» звезд
+              </h2>
+              <p class="item__text">
+                Данные получены на основе программы мониторинга лояльности
+              </p>
+              <a class="refContact" href="#contact_anchor">
+                <button class="item__btn">
+                  <span class="item__btn-text">Написать</span>
+                </button>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="contact" id="contact_anchor">
+        <div class="container">
+          <h2 class="contact__title">Напишите нам</h2>
+          <p class="contact__text">Ответим в течении пары минут ⏳</p>
+          <form name="contact__form" action="" class="contact__form">
+            <div class="label__wrapper">
+              <label for="name">Ваше имя *</label>
+              <input
+                type="text"
+                name="name"
+                id="name"
+                class="form_name"
+                placeholder="Владимир"
+              />
+            </div>
+            <div class="label__wrapper">
+              <label for="phoneNumber">Номер телефона</label>
+              <input
+                type="tel"
+                name="phoneNumber"
+                id="phoneNumber"
+                class="form_phoneNumber"
+                placeholder="+7 (999) 999-99-99"
+              />
+            </div>
+            <div class="label__wrapper">
+              <input
+                type="email"
+                name="email"
+                id="email"
+                class="form__email"
+                placeholder="Email *"
+              />
+            </div>
+            <div class="label__wrapper">
+              <input
+                type="text"
+                name="aboutProject"
+                id="aboutProject"
+                class="form__aboutProject"
+                placeholder="Коротко о проекте"
+              />
+            </div>
+            <label for="design" class="label__aboutProject">
+              <div class="aboutProject__wrapper">
+                <svg class="aboutProject__wrapper-icon">
+                  <use xlink:href="../icons/sprite.svg#clip"></use>
+                </svg>
+              </div>
+              <p class="aboutProject__text">Прикрепить прототип / дизайн</p>
+            </label>
+            <div class="label__aboutProject user-design">
+              <div class="aboutProject__wrapper user-design-close">
+                <svg class="aboutProject__wrapper-icon">
+                  <use xlink:href="../icons/sprite.svg#cross"></use>
+                </svg>
+              </div>
+              <div class="wrapper__text">
+                <p class="wrapper__text-name"></p>
+                <p class="wrapper__text-info"></p>
+              </div>
+            </div>
+            <input type="file" name="design" id="design" class="form__design" />
+            <input type="submit" value="ОТПРАВИТЬ" class="form__btn" />
+          </form>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="container">
+        <img
+          src="./img/Asset 23@3x 1.png"
+          alt="Кузня брендов"
+          class="footer__logo"
+        />
+        <address class="footer__address">
+          Россия, Москва, Большой Казенный переулок, 1
+        </address>
+        <div class="wrapper__map">
+          <p class="map__text">На карте</p>
+          <svg class="map__icon">
+            <use xlink:href="../icons/sprite.svg#arrow_link"></use>
+          </svg>
+        </div>
+        <ul class="footer__anchor" id="anchor_ref">
+          <li class="anchor-item">
+            <a href="#advantages_anchor">Наша цель</a>
+          </li>
+          <li class="anchor-item"><a href="#services_anchor">Услуги</a></li>
+          <li class="anchor-item"><a href="#industry_anchor">Индустрии</a></li>
+          <li class="anchor-item">
+            <a href="#experties_anchor">Экспертиза</a>
+          </li>
+          <li class="anchor-item"><a href="#contact_anchor">Контакты</a></li>
+        </ul>
+        <p class="footer__copyright">&copy 2015-2021</p>
+        <div class="footer__contact-info">
+          <a href="mailto:info@brandsforge.ru" class="contact-info__mail"
+            >info@brandsforge.ru</a
+          >
+          <a href="tel:+7 (495) 917-72-58" class="contact-info__phoneNumber"
+            >+7 (495) 917-72-58</a
+          >
+          <a href="tel:+7 (495) 917-72-59" class="contact-info__phoneNumber"
+            >+7 (495) 917-72-59</a
+          >
+        </div>
+        <a href="./img/Asset 19@2x.png" class="wrapper__download" download>
+          <div class="download__circle">
+            <svg class="map__icon">
+              <use xlink:href="../icons/sprite.svg#download"></use>
+            </svg>
+          </div>
+          <div class="download__file">
+            <p class="file__name">Download Presentation</p>
+            <p class="file__info">PDF, 3mb</p>
+          </div>
+        </a>
+        <p class="footer__privacy-policy">Политика конфиденциальности</p>
+      </div>
+    </footer>
+    <!-- <div class="sparkBackground"></div> -->
+    <script src="./js/index.js"></script>
+  </body>
+</html>
