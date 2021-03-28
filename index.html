@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="css/style.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/tilt.js/1.0.3/tilt.jquery.min.js"
@@ -14,18 +14,130 @@
     <title>Document</title>
   </head>
   <body>
+    <div class="wrapper__pop-up">
+      <div class="pop-up__message-send complete">
+        <svg class="message-send__icon-close">
+          <use xlink:href="icons/sprite.svg#form_close"></use>
+        </svg>
+        <div class="message-send__icon-wrapper">
+          <img
+            src="icons/complete.svg"
+            alt="Отправлено"
+            class="message-send__icon-complete"
+          />
+        </div>
+        <h2 class="message-send__title">Письмо отправлено</h2>
+        <p class="message-send__text">
+          Благодарим Вас за обращение к нам. Мы свяжемся с вами как можно
+          скорее.
+        </p>
+        <button class="message-send__btn">Окей</button>
+      </div>
+
+      <div class="pop-up__message-send error">
+        <svg class="message-send__icon-close">
+          <use xlink:href="icons/sprite.svg#form_close"></use>
+        </svg>
+        <div class="message-send__icon-wrapper">
+          <img
+            src="icons/red-close.svg"
+            alt="Отправлено"
+            class="message-send__icon-complete"
+          />
+        </div>
+        <h2 class="message-send__title">Ошибка отправки</h2>
+        <p class="message-send__text">
+          Что-то пошло не так. Попробуйте позже, или напишите на
+          <a href="mailto:hello@brandsforge.ru">hello@brandsforge.ru</a>
+        </p>
+        <button class="message-send__btn">Окей</button>
+      </div>
+    </div>
+
+    <div class="header__form-fixed">
+
+      <form action="" class="form__message">
+        <div class="form__message-header">
+          <h2 class="message-header__title">Рады знакомству</h2>
+          <svg class="message-header__icon">
+            <use xlink:href="icons/sprite.svg#form_close"></use>
+          </svg>
+          <p class="message-header__text">
+            Напишите и мы ответим в течении пары минут ⏳
+          </p>
+        </div>
+        <div class="form__message-body">
+          <input
+            type="text"
+            name="message"
+            id="message"
+            class="message-body__message"
+            placeholder="Введите сообщение..."
+            autocomplete="off"
+          />
+          <!-- <textarea name="message" id="message" class="message-body__message" placeholder="Введите сообщение..." cols="30" rows="10"></textarea> -->
+          <input type="text" name="user_name" class="message-body__username">
+          <input type="email" name="user_email" class="message-body__useremail">
+          <input type="submit" value="отправить" class="message-body__submit">
+          <p class="message-body__hellow">
+            <span class="hellow_first">Привет. 👋 Предлагаю</span>
+            <span class="hellow_two">обсудить проект</span>
+          </p>
+        </div>
+      </form>
+
+      <form action="" class="user__contact" method="POST">
+        <div class="user__contact-header">
+          <svg class="user__contact-icon">
+            <use xlink:href="icons/sprite.svg#back_arrow"></use>
+          </svg>
+          <h2 class="user__contact-title">Контакты для связи</h2>
+        </div>
+        <input
+          type="text"
+          name="user-name"
+          id="user-name"
+          class="user__contact-name"
+          placeholder="Ваше имя"
+          required
+        />
+        <input
+          type="email"
+          name="user__contact-email"
+          id="user__contact-email"
+          class="user__contact-email"
+          placeholder="Email для связи"
+          required
+        />
+        <input type="submit" value="" class="user__contact-send">
+      </form>
+
+
+      <div class="icons-wrapper__circle floatCircle">
+        <svg class="icons-wrapper__paper__plane">
+          <use xlink:href="icons/sprite.svg#paper_plane"></use>
+        </svg>
+      </div>
+      <div class="icons-wrapper__circle-2">
+        <svg class="icons-wrapper__paper__plane">
+          <use xlink:href="icons/sprite.svg#paper_plane"></use>
+        </svg>
+      </div>
+
+    </div>
     <header class="header">
       <div class="header__content">
         <nav class="menu">
           <div class="container">
             <img
               src="img/Asset 23@3x 1.png"
+              srcset="img/Asset23@2x.png"
               alt="Кузня брендов"
               class="menu__logo"
             />
             <div class="menu__title-wrapper">
               <h2 class="title-wrapper__title">
-                <span class="title-wrapper__text">С нами вас ждёт успех</span>
+                <span class="title-wrapper__text">С нами вас ждёт успех</span> 
                 <a class="refContact" href="#contact_anchor">
                   <button class="title-wrapper__btn">Написать</button>
                 </a>
@@ -73,15 +185,17 @@
         <div class="container">
           <div class="header__top">
             <img
-              src="./img/logo@3x 1.png"
+              src="img/logo@3x 1.png"
+              srcset="img/Layer4@2x.png"
               alt="Кузня брендов"
               class="header__top-logo"
             />
-            <img
-              src="./img/Layer 4@3x 1 (1).png"
-              alt="logo"
-              class="header__top-logo-mobile"
-            />
+            <!-- <img
+              src="img/white_logo.svg"
+              alt="Кузня брендов"
+              class="header__top-logo"
+            /> -->
+            <img src="img/Layer 4@3x 1 (1).png" srcset="img/Layer4@2x.png" alt="logo" class="header__top-logo-mobile">
             <div class="header__top-rWrapper">
               <p class="header__top-phone">+7 (495) 917-72-58</p>
               <p class="header__top-language en">EN</p>
@@ -97,7 +211,7 @@
             digital.
           </p>
 
-          <div class="wrapper__pop-up">
+          <!-- <div class="wrapper__pop-up">
             <div class="pop-up__message-send complete">
               <svg class="message-send__icon-close">
                 <use xlink:href="icons/sprite.svg#form_close"></use>
@@ -135,7 +249,7 @@
               </p>
               <button class="message-send__btn">Окей</button>
             </div>
-          </div>
+          </div> -->
 
           <div class="header__icons-wrapper">
             <form action="" class="form__message">
@@ -157,6 +271,10 @@
                   placeholder="Введите сообщение..."
                   autocomplete="off"
                 />
+                <!-- <textarea name="message" id="message" class="message-body__message" placeholder="Введите сообщение..." cols="30" rows="10"></textarea> -->
+                <input type="text" name="user_name" class="message-body__username">
+                <input type="email" name="user_email" class="message-body__useremail">
+                <input type="submit" value="отправить" class="message-body__submit">
                 <p class="message-body__hellow">
                   <span class="hellow_first">Привет. 👋 Предлагаю</span>
                   <span class="hellow_two">обсудить проект</span>
@@ -164,7 +282,7 @@
               </div>
             </form>
 
-            <form action="" class="user__contact">
+            <form action="" class="user__contact" method="POST">
               <div class="user__contact-header">
                 <svg class="user__contact-icon">
                   <use xlink:href="icons/sprite.svg#back_arrow"></use>
@@ -177,6 +295,7 @@
                 id="user-name"
                 class="user__contact-name"
                 placeholder="Ваше имя"
+                required
               />
               <input
                 type="email"
@@ -184,7 +303,9 @@
                 id="user__contact-email"
                 class="user__contact-email"
                 placeholder="Email для связи"
+                required
               />
+              <input type="submit" value="" class="user__contact-send">
             </form>
 
             <a href="#advantages_anchor" class="scroll-wrapper">
@@ -194,9 +315,12 @@
               <p class="icons-wrapper__text">Листай</p>
             </a>
             <div class="icons-wrapper__circle">
-              <svg class="icons-wrapper__arrow__right">
-                <use xlink:href="icons/sprite.svg#arrow_right"></use>
+              <svg class="icons-wrapper__paper__plane">
+                <use xlink:href="icons/sprite.svg#paper_plane"></use>
               </svg>
+              <!-- <svg class="icons-wrapper__arrow__right">
+                <use xlink:href="icons/sprite.svg#arrow_right"></use>
+              </svg> -->
             </div>
             <div class="icons-wrapper__circle-2">
               <svg class="icons-wrapper__paper__plane">
@@ -225,13 +349,14 @@
         </div>
       </div>
       <img
-        src="./img/image 13.png"
+        src="img/image 13.png"
         alt=""
-        srcset="./img/image13@2x.png 2x"
+        srcset="img/image13@2x.png 2x"
         class="header__forge"
       />
       <div class="header__forge-mobile"></div>
-      <img src="./img/gd.png" alt="gradient" class="gradient" />
+      <img src="img/gd.png" alt="gradient" class="gradient">
+
     </header>
     <main class="main">
       <section class="advantages" id="advantages_anchor">
@@ -492,27 +617,27 @@
       <section class="industry">
         <div class="container">
           <img
-            src="./img/Asset 14@2x.png"
+            src="img/Asset 14@2x.png"
             alt="diamond-14"
             class="diamond-14"
           />
           <img
-            src="./img/Asset 15@2x.png"
+            src="img/Asset 15@2x.png"
             alt="diamond-15"
             class="diamond-15"
           />
           <img
-            src="./img/Asset 17@2x.png"
+            src="img/Asset 17@2x.png"
             alt="diamond-17"
             class="diamond-17"
           />
           <img
-            src="./img/Asset 18@2x.png"
+            src="img/Asset 18@2x.png"
             alt="diamond-18"
             class="diamond-18"
           />
           <img
-            src="./img/Asset 16@2x.png"
+            src="img/Asset 16@2x.png"
             alt="diamond-16"
             class="diamond-16"
           />
@@ -524,32 +649,32 @@
                 холдингами и стартапами, из России и по всему миру.
               </p>
               <div class="wrapper__diamond-btn">
-                <img
-                  src="./img/Asset 14@2x.png"
-                  alt="spark-14"
-                  class="spark-14"
-                />
-                <img
-                  src="./img/Asset 15@2x.png"
-                  alt="spark-15"
-                  class="spark-15"
-                />
-                <img
-                  src="./img/Asset 17@2x.png"
-                  alt="spark-17"
-                  class="spark-17"
-                />
-                <img
-                  src="./img/Asset 18@2x.png"
-                  alt="spark-18"
-                  class="spark-18"
-                />
-                <img
-                  src="./img/Asset 16@2x.png"
-                  alt="spark-16"
-                  class="spark-16"
-                />
-                <a class="refContact" href="#contact_anchor">
+                <a class="refContact btn-diamond" href="#contact_anchor">
+                  <img
+                    src="img/Asset 14@2x.png"
+                    alt="spark-14"
+                    class="spark-14"
+                  />
+                  <img
+                    src="img/Asset 15@2x.png"
+                    alt="spark-15"
+                    class="spark-15"
+                  />
+                  <img
+                    src="img/Asset 17@2x.png"
+                    alt="spark-17"
+                    class="spark-17"
+                  />
+                  <img
+                    src="img/Asset 18@2x.png"
+                    alt="spark-18"
+                    class="spark-18"
+                  />
+                  <img
+                    src="img/Asset 16@2x.png"
+                    alt="spark-16"
+                    class="spark-16"
+                  />
                   <button class="info-wrapper__btn">
                     <span class="info-wrapper__btn-text">Написать</span>
                   </button>
@@ -667,6 +792,7 @@
               </a>
             </div>
             <div class="benefits__list-item">
+              <!-- <img src="./icons/infinity.svg" alt="" class="circle__icon"> -->
               <svg class="circle__icon">
                 <use xlink:href="icons/sprite.svg#infinity"></use>
               </svg>
@@ -719,29 +845,74 @@
         </div>
       </section>
       <section class="contact" id="contact_anchor">
+
+        <div class="wrapper__pop-up__contact">
+          <div class="pop-up__message-send__contact complete">
+            <svg class="message-send__icon-close__contact">
+              <use xlink:href="icons/sprite.svg#form_close"></use>
+            </svg>
+            <div class="message-send__icon-wrapper__contact">
+              <img
+                src="icons/complete.svg"
+                alt="Отправлено"
+                class="message-send__icon-complete__contact"
+              />
+            </div>
+            <h2 class="message-send__title__contact">Письмо отправлено</h2>
+            <p class="message-send__text__contact">
+              Благодарим Вас за обращение к нам. Мы свяжемся с вами как можно
+              скорее.
+            </p>
+            <button class="message-send__btn__contact">Окей</button>
+          </div>
+
+          <div class="pop-up__message-send__contact error">
+            <svg class="message-send__icon-close__contact">
+              <use xlink:href="icons/sprite.svg#form_close"></use>
+            </svg>
+            <div class="message-send__icon-wrapper__contact">
+              <img
+                src="icons/red-close.svg"
+                alt="Отправлено"
+                class="message-send__icon-complete__contact"
+              />
+            </div>
+            <h2 class="message-send__title__contact">Ошибка отправки</h2>
+            <p class="message-send__text__contact">
+              Что-то пошло не так. Попробуйте позже, или напишите на
+              <a href="mailto:hello@brandsforge.ru">hello@brandsforge.ru</a>
+            </p>
+            <button class="message-send__btn__contact">Окей</button>
+          </div>
+        </div>
+
         <div class="container">
+          
           <h2 class="contact__title">Напишите нам</h2>
           <p class="contact__text">Ответим в течении пары минут ⏳</p>
-          <form name="contact__form" action="" class="contact__form">
+          <form name="contact__form" action="http://localhost:8080/brandsforge/php/send-mail.php" method="POST" class="contact__form">
             <div class="label__wrapper">
-              <label for="name">Ваше имя *</label>
               <input
                 type="text"
                 name="name"
                 id="name"
                 class="form_name"
-                placeholder="Владимир"
+                placeholder=" "
+                required
               />
+              <label for="name" class="label_name">Ваше имя *</label>
             </div>
             <div class="label__wrapper">
-              <label for="phoneNumber">Номер телефона</label>
               <input
                 type="tel"
                 name="phoneNumber"
                 id="phoneNumber"
                 class="form_phoneNumber"
                 placeholder="+7 (999) 999-99-99"
+                pattern="^(\+)?(\(\d{2,3}\) ?\d|\d)(([ \-]?\d)|( ?\(\d{2,3}\) ?)){5,12}\d$"
+                required
               />
+              <label for="phoneNumber" class="label_phoneNumber">Номер телефона</label>
             </div>
             <div class="label__wrapper">
               <input
@@ -749,8 +920,10 @@
                 name="email"
                 id="email"
                 class="form__email"
-                placeholder="Email *"
+                placeholder=" "
+                required
               />
+              <label for="email" class="label_email">Email *</label>
             </div>
             <div class="label__wrapper">
               <input
@@ -758,8 +931,10 @@
                 name="aboutProject"
                 id="aboutProject"
                 class="form__aboutProject"
-                placeholder="Коротко о проекте"
+                placeholder=" "
+                required
               />
+              <label for="aboutProject" class="label_aboutProject">Коротко о проекте</label>
             </div>
             <label for="design" class="label__aboutProject">
               <div class="aboutProject__wrapper">
@@ -780,7 +955,7 @@
                 <p class="wrapper__text-info"></p>
               </div>
             </div>
-            <input type="file" name="design" id="design" class="form__design" />
+            <input type="file" name="design" id="design" class="form__design" accept=".jpg,.jpeg,.png,.psd,.fig"/>
             <input type="submit" value="ОТПРАВИТЬ" class="form__btn" />
           </form>
         </div>
@@ -789,19 +964,20 @@
     <footer class="footer">
       <div class="container">
         <img
-          src="./img/Asset 23@3x 1.png"
+          src="img/Asset 23@3x 1.png"
+          srcset="img/Asset23@2x.png"
           alt="Кузня брендов"
           class="footer__logo"
         />
         <address class="footer__address">
           Россия, Москва, Большой Казенный переулок, 1
         </address>
-        <div class="wrapper__map">
+        <a class="wrapper__map" href="#">
           <p class="map__text">На карте</p>
           <svg class="map__icon">
             <use xlink:href="icons/sprite.svg#arrow_link"></use>
           </svg>
-        </div>
+        </a>
         <ul class="footer__anchor" id="anchor_ref">
           <li class="anchor-item">
             <a href="#advantages_anchor">Наша цель</a>
@@ -825,7 +1001,7 @@
             >+7 (495) 917-72-59</a
           >
         </div>
-        <a href="./img/Asset 19@2x.png" class="wrapper__download" download>
+        <a href="img/Asset 19@2x.png" class="wrapper__download" download>
           <div class="download__circle">
             <svg class="map__icon">
               <use xlink:href="icons/sprite.svg#download"></use>
@@ -839,7 +1015,6 @@
         <p class="footer__privacy-policy">Политика конфиденциальности</p>
       </div>
     </footer>
-    <!-- <div class="sparkBackground"></div> -->
-    <script src="./js/index.js"></script>
+    <script src="js/index.js"></script>
   </body>
 </html>
